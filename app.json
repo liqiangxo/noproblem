@@ -1,0 +1,50 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/life/life",
+    "pages/healthy/healthy",
+    "pages/myself/myself",
+    "pages/game/programmer",
+    "pages/on-accelerometer-change/on-accelerometer-change"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#000",
+    "navigationBarTitleText": "规矩的",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#eeeeee"
+  },
+  "tabBar": {
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "pages/res/main2.png",
+        "selectedIconPath": "pages/res/main1.png"
+      },
+      {
+        "pagePath": "pages/healthy/healthy",
+        "text": "健康",
+        "iconPath": "pages/res/jk1.png",
+        "selectedIconPath": "pages/res/jk2.png"
+      },
+      {
+        "pagePath": "pages/life/life",
+        "text": "生活",
+        "iconPath": "pages/res/life1.png",
+        "selectedIconPath": "pages/res/life2.png"
+      },
+      {
+        "pagePath": "pages/game/programmer",
+        "text": "game",
+        "iconPath": "pages/res/rizhi1.png",
+        "selectedIconPath": "pages/res/rizhi2.png"
+      }
+    ],
+    "color": "#ffffff",
+    "selectedColor": "#00ff00",
+    "backgroundColor": "#000000",
+    "position": "bottom"
+  }
+}

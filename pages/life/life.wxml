@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="usermotto">
+    <!--<text class="user-motto">{{motto}}</text>-->
+    <button type="primary" bindtap="moveToLocation">2048游戏</button>
+    <button type="primary" bindtap="accelerometer">重力</button>
+  </view>
+</view>

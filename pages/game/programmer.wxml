@@ -1,0 +1,70 @@
+<!--pages/game/programmer.wxml-->
+<!--<import src="template.wxml">-->
+<!--template for singal grid-->
+<template name="grid-depth1">
+    <view class="grid-depth1">
+        <view wx:if="{{value == 0}}" class="grid-depth1-nonfont"></view>
+        <view wx:elif="{{value < 100}}" class="grid-depth1-minfont">{{value}}</view>
+        <view wx:elif="{{value < 1000}}" class="grid-depth1-midfont">{{value}}</view>
+        <view wx:else="{{value < 10000}}" class="grid-depth1-maxfont">{{value}}</view>
+    </view>
+</template>
+<!--template for whole grid-->
+<template name="grid">
+    <view class="grid-background"  catchtouchmove="handleTouchMove" catchtouchstart="handleTouchStart" catchtouchend="handleTouchEnd" catchtouchcancel="handleTouchCancel">
+    <view wx:for="{{gridValue}}" wx:for-item="value">
+        <template is="grid-depth1" data="{{value}}"></template>
+    </view>
+    </view>
+</template>
+<!--view-->
+<view class="background">
+    <view class="choicebar">
+        <view class="choicebarelement">
+            <button class="button-restart" hover-class="button-restart-hover" catchtap="handleRestart">{{restartPrompt}}</button>
+        </view>
+        <view class="choicebarelement">
+            <view class="picker-group">
+                <picker mode="selector" bindchange="handleGameLevelSetting" value="{{level-1}}" range="{{gameLevel}}">
+                    <view class="picker">{{levelPrompt}} {{gameLevel[level-1]+"级"}}</view>
+                </picker>
+            </view>
+        </view>
+        <view class="choicebarelement">
+            <view class="picker-group">
+                <picker mode="selector" bindchange="handleGameModeSetting" value="{{mode-1}}" range="{{gameMode}}">
+                    <view class="picker">{{modePrompt}} {{gameMode[mode-1]+"M"}}</view>
+                </picker>
+            </view>
+        </view>
+    </view>
+    <view class="timebar">
+        <view class="time-data">{{gameTime}}</view>
+        <view class="time-progress"><progress percent="60" stroke-width="12" color="#FF0000"/></view>
+    </view>
+    <view class="grid-body">
+        <template is="grid" data="{{gridValue}}"></template>
+    </view>
+    <view id="top-charts">
+        <view id="charts-title">
+            <text>{{"排行榜"}}</text>
+        </view>
+        <view id="charts-head">
+        <text class="charts-head-item">{{"用户"}}</text>
+        <text class="charts-head-item">{{"分数"}}</text>
+        <text class="charts-head-item">{{"难度"}}</text>
+        <text class="charts-head-item">{{"模式"}}</text>
+        <text class="charts-head-item">{{"用时"}}</text>
+        </view>
+        <scroll-view id="charts-body-scroll" scroll-x="false" scroll-y="true" >
+            <view id="charts-body-view" wx:for="{{chartsUsers}}" wx:for-item="user">
+                <image src="{{user.avatar}}" mode="aspectFit"></image>
+                <text class="charts-body-item">{{user.name}}</text>
+                <text class="charts-body-item">{{user.score}}</text>
+                <text class="charts-body-item">{{user.level}}</text>
+                <text class="charts-body-item">{{user.mode}}</text>
+                <text class="charts-body-item">{{user.time}}</text>
+            </view>
+        </scroll-view>
+    </view>
+</view>

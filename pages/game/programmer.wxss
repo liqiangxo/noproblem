@@ -1,0 +1,203 @@
+/* pages/game/programmer.wxss */
+.background {
+    background-color: #FFDD99;
+}
+.grid-body {
+    height: 520rpx;
+    padding-top: 50rpx;
+    padding-left: 18%;
+    padding-bottom: 25rpx;
+    text-align: center;
+}
+.grid-background {
+    height: 450rpx;
+    width: 450rpx;
+    background-color: #FFDD99;
+    border: 10rpx solid lightgoldenrodyellow;
+    border-radius: 25rpx;
+    margin: 0, auto;
+    padding: 5rpx;
+    display:flex;
+    flex-wrap:wrap;
+    align-content:center;
+    align-items:center;
+    justify-content:center;
+    text-align: center;
+}
+.grid-depth1 {
+    text-align: center;
+    height: 80rpx;
+    width: 80rpx;
+    background-color: #FFBB66;
+    border: 10rpx solid orange;
+    border-radius: 20rpx;
+    margin: 5rpx;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    flex-direction: column;
+}
+.grid-depth2 {
+    text-align: center;
+    height: 80rpx;
+    width: 80rpx;
+    background-color: #FF1122;
+    border: 10rpx solid orange;
+    border-radius: 20rpx;
+    margin: 5rpx;
+    display: -webkit-box;
+    -webkit-box-pack: center;
+    -webkit-box-align: center;
+    flex-direction: column;
+}
+.grid-depth1-nonfont {
+    /*bug*/
+    background-color: #FFFFFF;
+}
+.grid-depth1-minfont {
+    color: #000000; 
+    font: bold 60rpx arial;
+}
+.grid-depth1-midfont {
+    color: #FF3333;
+    font: bold 45rpx arial;
+}
+.grid-depth1-maxfont {
+    color: #FFFF33;
+    font: bold 30rpx arial;
+}
+.button-restart {
+    font: bold 60rpx arial;
+    background-color: #FFDD99;
+    border-radius: 10rpx;
+    text-align: center;
+    line-height: 100%;
+    padding: 10rpx;
+}
+.button-restart-hover {
+    background-color: #CCBB77;
+}
+.choicebar {
+    height: 100rpx;
+    width: 100%;
+    text-align:center;
+    display: table;
+    table-layout: auto;
+    position: relative;
+}
+.choicebarelement {
+    display: table-cell;
+    empty-cells: hide;
+    text-align: center;
+    line-height: 100rpx;
+    margin: 0, auto;
+}
+.picker-group {
+    height: 100%;
+    width: 100%;
+    margin: 5rpx;
+    display:flex;
+    flex-wrap:wrap;
+    align-content:center;
+    align-items:center;
+    justify-content:center;
+}
+.time-data {
+    font: bold 40rpx arial;
+    text-align: center;
+    padding: 20rpx;
+
+}
+.time-progress {
+    height: 100%;
+    padding: 10rpx;
+}
+
+#top-charts {
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+#charts-title {
+    font: bold 50rpx arial;
+    margin: 5rpx;
+    text-align: center;
+}
+#charts-head {
+    /* position: absolute; */
+    display: flex;
+    width: 100%;
+    text-align: center;
+    flex-wrap:nowrap;
+}
+#charts-head text:nth-child(1){
+    flex:1 1 auto;
+    min-width: 250rpx;
+}
+#charts-head text:nth-child(2){
+    flex:1 1 auto;
+    max-width:100rpx;
+    min-width: 100rpx;
+}
+#charts-head text:nth-child(3){
+    flex:1 1 auto;
+    max-width:60rpx;
+    min-width: 60rpx;
+}
+#charts-head text:nth-child(4){
+    flex:1 1 auto;
+    max-width:60rpx;
+    min-width: 60rpx;
+}
+#charts-head text:nth-child(5){
+    flex:1 1 auto;
+    max-width:100rpx;
+    min-width: 100rpx;
+}
+.charts-head-item {
+    font: bold 30rpx arial;
+    margin: 5rpx;
+    padding: 10rpx;
+}
+#charts-body-view {
+    /* position: absolute; */
+    display: flex;
+    width: 100%;
+    text-align: center;
+    flex-wrap:nowrap;
+}
+#charts-body-view image:nth-child(1){
+    width: 50rpx;
+    height: 50rpx;
+    /* border: 1rpx solid #00FF00; */
+    border-radius: 50%;
+}
+#charts-body-view text:nth-child(2){
+    flex:1 1 auto;
+    min-width: 200rpx;
+    max-width: 200rpx;
+}
+#charts-body-view text:nth-child(3){
+    flex:1 1 auto;
+    max-width:100rpx;
+    min-width: 100rpx;
+}
+#charts-body-view text:nth-child(4){
+    flex:1 1 auto;
+    max-width:60rpx;
+    min-width: 60rpx;
+}
+#charts-body-view text:nth-child(5){
+    flex:1 1 auto;
+    max-width:60rpx;
+    min-width: 60rpx;
+}
+#charts-body-view text:nth-child(6){
+    flex:1 1 auto;
+    min-width: 100rpx;
+}
+.charts-body-item {
+    font: bold 30rpx arial;
+    margin: 0rpx;
+    padding: 10rpx;
+}

@@ -1,0 +1,43 @@
+<!--healthy.wxml-->
+<!--
+  healthy: int
+  msg: string
+  time: string
+-->
+
+<view class="page__bd">
+  <view class="section section_gap" wx:for="{{array}}" wx:for-item="item">
+    <view class="section__title">{{item.text}}</view>
+    <view class="section__ctn">
+      <image style="width: 200px; height: 200px; background-color: #eeeeee;" mode="{{item.mode}}" src="{{item.src}}"></image>
+    </view>
+  </view>
+</view>
+
+<!--<template name="msgItem">
+  <view>
+    <text> {{healthy}}: {{msg}} </text>
+    <text> Time: {{time}} </text>
+  </view>
+</template>
+<view class="container">
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+
+    <template is="msgItem" data="{{...item}}"/>
+<template name="odd">
+  <view> odd </view>
+</template>
+<template name="even">
+  <view> even </view>
+</template>-->
+
+<!--<block wx:for="{{[1, 2, 3, 4, 5]}}">
+    <template is="{{item % 2 == 0 ? 'even' : 'odd'}}"/>
+</block>-->
+
+<!-- navigator.wxml -->
+<!--<view style="text-align:center"> {{title}} </view>
+<view> 点击左上角返回回到之前页面 </view>
+</view>-->
